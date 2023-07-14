@@ -16,7 +16,7 @@ const inject = async (branch, version) => {
   
   const meta = document.createElement("meta");
   meta.setAttribute("http-equiv", "content-security-policy");
-  meta.setAttribute("content", "connect-src * blob: data:;style-src * blob: data:;img-src * blob: data:;font-src * blob: data:");
+  meta.setAttribute("content", "connect-src * blob: data:");
   document.head.appendChild(meta);
 
   //const js = await (await fetch(branchURLs[branch])).text(); // JSON.parse(localStorage.getItem('goosemodCoreJSCache'));
