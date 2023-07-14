@@ -14,6 +14,10 @@ const inject = async (branch, version) => {
   console.log('[GooseMod for Web] Branch =', branch);
   console.log('[GooseMod for Web] JS Url =', branchURLs[branch]);
   
+  const meta = document.createElement("meta");
+  meta.setAttribute("http-equiv", "content-security-policy");
+  meta.setAttribute("content", "connect-src * blob: data:;style-src * blob: data:;img-src * blob: data:;font-src * blob: data:");
+
   //const js = await (await fetch(branchURLs[branch])).text(); // JSON.parse(localStorage.getItem('goosemodCoreJSCache'));
 
   const el = document.createElement('script');
