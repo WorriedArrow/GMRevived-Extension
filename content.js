@@ -18,7 +18,9 @@ const inject = async (branch, version) => {
 
   const el = document.createElement('script');
   
-  el.appendChild(document.createTextNode(js));
+  el.src = branchURLs[branch];
+
+  //el.appendChild(document.createTextNode(js));
   
   document.body.appendChild(el);
 
