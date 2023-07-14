@@ -7,7 +7,7 @@ const inject = async (branch, version) => {
 
   const branchURLs = {
     release: 'https://api.goosemod.com/inject.js',
-    dev: 'https://raw.githubusercontent.com/WorriedArrow/GM-Revived/dist-dev/index.js',
+    dev: 'https://github.com/WorriedArrow/GM-Revived/releases/download/dev/index.js',
     local: 'http://localhost:1234/index.js'
   };
 
