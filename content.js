@@ -14,18 +14,11 @@ const inject = async (branch, version) => {
   console.log('[GooseMod for Web] Branch =', branch);
   console.log('[GooseMod for Web] JS Url =', branchURLs[branch]);
   
-  const meta = document.createElement("meta");
-  meta.setAttribute("http-equiv", "content-security-policy");
-  meta.setAttribute("content", "connect-src * blob: data:");
-  document.head.appendChild(meta);
-
-  //const js = await (await fetch(branchURLs[branch])).text(); // JSON.parse(localStorage.getItem('goosemodCoreJSCache'));
+  const js = await (await fetch(branchURLs[branch])).text(); // JSON.parse(localStorage.getItem('goosemodCoreJSCache'));
 
   const el = document.createElement('script');
   
-  el.src = branchURLs[branch];
-
-  //el.appendChild(document.createTextNode(js));
+  el.appendChild(document.createTextNode(js));
   
   document.body.appendChild(el);
 
