@@ -7,7 +7,7 @@ const inject = async (branch, version) => {
 
   const branchURLs = {
     release: 'https://api.goosemod.com/inject.js',
-    dev: 'https://raw.githubusercontent.com/GooseMod/GooseMod/dist-dev/index.js',
+    dev: 'https://raw.githubusercontent.com/WorriedArrow/GM-Revived/dist-dev/index.js',
     local: 'http://localhost:1234/index.js'
   };
 
@@ -51,7 +51,7 @@ chrome.storage.local.get(null, (data) => {
 
   const el = document.createElement('script');
 
-  el.appendChild(document.createTextNode(`(${inject.toString()})(${JSON.stringify(storageCache['goosemodUntetheredBranch'] || 'release')}, ${JSON.stringify(extVersion)})`));
+  el.appendChild(document.createTextNode(`(${inject.toString()})('dev')}, ${JSON.stringify(extVersion)})`));
 
   document.body.appendChild(el);
 });
