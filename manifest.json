@@ -30,7 +30,8 @@
         "storage",
         "webRequest",
         "webRequestBlocking",
-        "*://*.discord.com/*"
+        "*://*.discord.com/*",
+        "*://raw.githubusercontent.com/*"
     ],
 
     "manifest_version": 2,
