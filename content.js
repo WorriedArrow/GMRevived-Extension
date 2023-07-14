@@ -14,7 +14,7 @@ const inject = async (branch, version) => {
   console.log('[GooseMod for Web] Branch =', branch);
   console.log('[GooseMod for Web] JS Url =', branchURLs[branch]);
   
-  const js = await (await fetch(branchURLs[branch])).text(); // JSON.parse(localStorage.getItem('goosemodCoreJSCache'));
+  //const js = await (await fetch(branchURLs[branch])).text(); // JSON.parse(localStorage.getItem('goosemodCoreJSCache'));
 
   const el = document.createElement('script');
   
