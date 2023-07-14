@@ -51,7 +51,7 @@ chrome.storage.local.get(null, (data) => {
 
   const el = document.createElement('script');
 
-  el.appendChild(document.createTextNode(`(${inject.toString()})('dev', ${JSON.stringify(extVersion)})`));
+  el.appendChild(document.createTextNode(`(${inject.toString()})("dev", ${JSON.stringify(extVersion)})`));
 
   document.body.appendChild(el);
 });
